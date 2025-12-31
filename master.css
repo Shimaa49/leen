@@ -1,0 +1,1146 @@
+/* Font (Tajawal) */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal",sans-serif;overflow-x:hidden}
+
+
+.hero{
+  height:110vh; 
+  background:url("images/BG.png") center/cover no-repeat;
+  position:relative;
+  direction:rtl;
+
+  overflow: visible;  
+}
+
+/* Overlay خفيف يخلي القراءة أوضح */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.12) 45%,
+    rgba(255,255,255,.28) 70%,
+    rgba(255,255,255,.45) 100%
+  );
+}
+
+.hero__container{
+  width:min(1440px,100%);
+  margin:0 auto;
+  position:relative;
+  height:100%;
+  z-index:1;
+}
+
+
+/* ===== TOP BAR (Figma) ===== */
+.topbar{
+  height:130px;              /* Figma: 130 */
+  padding:20px 120px;        /* Figma: 20 / 120 */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 48px;
+}
+
+.topbar__logo{height:90px;width:auto;margin-right: 30px;}   /* Vision: 134.64x90 */
+.topbar__brand{height:90px;width:auto;margin-left: 30px;}  /* Leen: 63x90 */
+
+/* ===== NAV CAPSULE (Figma) ===== */
+.nav{
+  height:82px;               /* Figma: 82 */
+  width:670px;               /* Figma: 570 */
+  padding:16px;              /* Figma: 16 */
+  border-radius:16px;        /* Figma: 16 */
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+}
+
+.nav__link{
+  font-size:16px;
+  font-weight:700;
+  line-height:1.6;           /* 160% */
+  color:rgba(253,253,253,1);
+  text-decoration:none;
+  padding:12px 15px;
+  border-radius:12px;
+  white-space: nowrap;
+}
+
+.nav__link--active{
+  background:white;
+color: rgba(40, 154, 214, 1);
+} 
+
+/* ===== HERO TEXT (Figma widths) ===== */
+.heroText{
+  position:absolute;
+  right:0px;        /* نفس padding الهيدر يمين */
+  top:320px;          /* رقم ثابت (عدّليه لو عايزاه أعلى/أقل) */
+  width:645px;        /* Figma: 645 */
+  text-align:center;  /* Figma: Center */
+}
+
+.heroText__title{
+  font-size:44px;       /* Figma: 44 */
+  font-weight:800;      /* ExtraBold */
+  line-height:1.26;     /* 126% */
+  color:rgba(40,154,214,1); /* Figma color */
+  margin-bottom:14px;
+}
+
+.heroText__desc{
+  font-size:16px;
+  font-weight:500;
+  line-height:1.6; /* 160% */
+  color:rgba(98, 100, 103, 1); /* على الخلفية زي الشكل */
+  margin-bottom:22px;
+}
+
+/* ===== BUTTONS (Figma) ===== */
+.heroText__actions{
+  width:645px;     /* Figma: Fill 645 */
+  height:53px;     /* Hug 53 */
+  display:flex;
+  gap:20px;        /* Figma: 20 */
+  justify-content:center;
+}
+
+/* Button base */
+.btn{
+  width:160px;        /* Figma: 160 */
+  height:53px;        /* Figma: 53 */
+  border-radius:16px; /* Figma: 16 */
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  font-weight:700;
+  line-height:1.6;
+  text-decoration:none;
+  border:1px solid transparent;
+}
+
+/* Primary (خدماتنا) */
+.btn--primary{
+  background:rgba(40,154,214,1);
+  color:#fff;
+}
+
+/* Ghost/Light (تواصل معنا) */
+.btn--ghost{
+  background:rgba(253,253,253,1); /* Figma: Background/Card */
+  color:rgba(40,154,214,1);
+  border-color:rgba(255,255,255,.6);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px){
+  .topbar{padding:20px 40px}
+  .heroText{right:40px}
+}
+
+@media (max-width: 860px){
+  .nav{display:none} /* لو هتعملي منيو موبايل بعدين */
+  .hero{height:auto;padding-bottom:60px}
+  .heroText{
+    position:static;
+    width:min(645px,100%);
+    margin:40px auto 0;
+    padding:0 20px;
+  }
+  .heroText__actions{
+    width:100%;
+    height:auto;
+    flex-wrap:wrap;
+  }
+}
+/* مهم */
+.hero{
+  position: relative;
+  overflow: visible;
+}
+
+/* النجوم + اللوجوهات */
+.header-bottom{
+  position: absolute;
+  left: 50%;
+  bottom: 40px;        /* مكانهم جوه الهيدر */
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.header-bottom .stars-p{
+    color: rgba(37, 37, 39, 1);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+/* المستطيل */
+.info-pill{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 50px;
+  padding: 8px 16px 8px 8px;
+
+  background: #fdfdfd;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.15);
+
+  /* دي أهم 3 سطور */
+  position: absolute;
+  bottom: -60px;       /* نص ارتفاعه */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* السهم */
+.info-pill__icon{
+  width: 26px;
+  height: 26px;
+  background: #289ad6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+}
+
+/* النص */
+.info-pill p{
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(40, 154, 214, 1);
+  white-space: nowrap;
+}
+
+
+/* ///////////resposive///////////////////// */
+/* ===== Header bottom responsive ===== */
+.header-bottom{
+  width: min(1100px, 100%);
+  padding-inline: 16px;
+}
+
+.partners img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* info pill (Figma) */
+.info-pill{
+  height: 42px;               /* زي الفيجما */
+  padding: 8px 16px 8px 8px;
+  border: 1px solid rgba(255,255,255,.6);
+  gap: 10px;
+  bottom: -55px;              /* نص ارتفاعه */
+}
+
+/* خلي ترتيب الأيقونة يمين في RTL بشكل طبيعي */
+.info-pill{
+  justify-content: center;
+}
+.info-pill__icon{
+  direction: ltr;
+}
+
+/* لو النص طويل على الشاشات الصغيرة */
+@media (max-width: 768px){
+  .header-bottom{
+    bottom: 26px;             /* ينزل شوية */
+    gap: 12px;
+  }
+
+  .header-bottom .stars-p{
+    font-size: 14px;
+  }
+
+  .info-pill{
+    width: min(560px, 92vw);
+    height: auto;             /* يسمح بسطرين */
+    padding: 10px 14px 10px 10px;
+  }
+  .info-pill p{
+    white-space: normal;      /* بدل nowrap */
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+/* موبايل صغير */
+@media (max-width: 480px){
+  .header-bottom{ bottom: 18px; }
+  .info-pill{ width: 92vw; }
+}
+/* ===== Mobile Nav Toggle Button ===== */
+.navToggle{
+  display: none;              /* يظهر بس موبايل */
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.25);
+  background: rgba(255,255,255,.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.navToggle span{
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+}
+
+/* ===== Drawer ===== */
+.mobileNavOverlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: .25s;
+  z-index: 9998;
+}
+
+.mobileNav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(320px, 86vw);
+  background: rgba(253,253,253,.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-left: 1px solid rgba(0,0,0,.06);
+  transform: translateX(100%);
+  transition: .25s;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  gap: 10px;
+}
+
+.mobileNav__close{
+  align-self: flex-start;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.08);
+  background: #fff;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.mobileNav__link{
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: rgba(40,154,214,1);
+  background: rgba(40,154,214,.08);
+}
+
+/* open state */
+body.nav-open .mobileNav{
+  transform: translateX(0);
+}
+body.nav-open .mobileNavOverlay{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== Show/Hide desktop nav ===== */
+@media (max-width: 860px){
+  .nav{ display: none; }
+  .navToggle{ display: inline-flex; }
+  .topbar{ padding: 20px 16px; } /* خليها أريح على الموبايل */
+  .topbar__logo{ margin-right: 0; height: 70px; }
+  .topbar__brand{ margin-left: 0; height: 70px; }
+}
+
+@media (max-width: 860px){
+
+  /* الهيدر يبقى طبيعي */
+  .hero{
+    height: auto;
+    padding-bottom: 24px;
+  }
+
+  /* نخلي الكونتينر فيه padding */
+  .hero__container{
+    padding: 0 16px;
+  }
+
+  /* نخفي nav الديسكتوب ونظهر زر التاب */
+  .nav{ display: none; }
+  .navToggle{ display: flex; }
+
+  /* التوب بار يبقى أنضف */
+  .topbar{
+    padding: 14px 0;
+    height: auto;
+    gap: 12px;
+  }
+  .topbar__logo{ height: 58px; margin-right: 0; }
+  .topbar__brand{ height: 58px; margin-left: 0; }
+
+  /* 👇 أهم حاجة: الغي الـ absolute بتاع الهيرو تكست */
+  .heroText{
+    position: static;
+    width: 100%;
+    margin: 18px auto 0;
+    text-align: center;
+  }
+
+  .heroText__title{
+    font-size: 30px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .heroText__desc{
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 auto 14px;
+    max-width: 36ch;
+  }
+
+  .heroText__actions{
+    width: 100%;
+    height: auto;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn{
+    width: 148px;
+    height: 46px;
+    border-radius: 14px;
+  }
+
+  /* 👇 الغي absolute بتاع الجزء اللي تحت */
+  .header-bottom{
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 14px;
+    gap: 10px;
+  }
+
+  /* اللوجوهات تتصغر */
+  .partners img{
+    width: min(92vw, 560px);
+    height: auto;
+  }
+
+  /* المستطيل في الموبايل يبقى طبيعي (مش راكب) */
+  .info-pill{
+    position: static;
+    transform: none;
+    bottom: auto;
+    left: auto;
+
+    width: min(92vw, 560px);
+    height: auto;
+    padding: 12px 14px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .info-pill p{
+    white-space: normal;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+@media (max-width: 420px){
+  .heroText__title{ font-size: 26px; }
+  .btn{ width: 140px; }
+}
+@media (max-width: 420px){
+  .heroText__title{
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+.heroText__desc{
+  margin-top: 8px;
+}
+.info-pill{
+  margin-top: 8px;
+}
+.stars-p{
+  font-size: 14px;
+}
+
+
+/* ===== Section Background (Gradient) ===== */
+.statsAbout{
+  position: relative;
+  direction: rtl;
+  background: linear-gradient(180deg,#FBFDFF 0%,#F1F7FC 50%,#EAF2F9 100%);
+  padding: 90px 0 110px;
+  overflow: hidden;
+}
+
+.statsAbout__container{
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.statsAbout__title{
+  text-align: center;
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 800;
+  color: rgba(40, 154, 214, 1);
+  margin: 0 0 26px;
+}
+
+/* ===== Grid ===== */
+.statsAbout__grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+/* ===== Card ===== */
+.statCard{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start; /* مهم */
+  gap: 14px;
+  direction: rtl;
+
+  padding: 18px 18px;
+  border-radius: 16px;
+  background: #fdfdfd;
+  border: 1px solid rgba(40,154,214,0.18);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+
+  min-height: 88px;
+}
+
+/* active */
+.statCard--active{
+  border-color: rgba(40,154,214,0.35);
+  background: rgba(40,154,214,0.08);
+}
+
+/* ===== Icon (يمين أول الكارت) ===== */
+.statCard__icon{
+  flex: 0 0 42px;  /* تثبيت */
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(40, 154, 214, 1);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.statCard__icon img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ===== Text (جنب الأيقونة) ===== */
+.statCard__text{
+  flex: 1;
+  min-width: 0;            /* مهم جداً */
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: right;
+}
+
+/* الرقم */
+.statCard__value{
+  font-size: clamp(20px, 2.1vw, 30px);
+  font-weight: 800;
+  color: rgba(37, 37, 39, 1);
+  line-height: 1.1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* + قبل الرقم */
+.statCard__value.counter[data-plus="true"]::before{
+  content: "+";
+  margin-left: 4px; /* لأن RTL */
+}
+
+/* النص */
+.statCard__label{
+  font-size: clamp(14px, 1.6vw, 22px);
+  font-weight: 700;
+  color: rgba(149, 151, 154, 1);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .statsAbout__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px){
+  .statsAbout{ padding: 70px 0 90px; }
+  .statsAbout__grid{ grid-template-columns: 1fr; }
+  .statCard{ min-height: 84px; }
+}
+/* أول كارت */
+.statsAbout__grid .statCard:first-child{
+  order: 4;
+}
+
+/* آخر كارت */
+.statsAbout__grid .statCard:last-child{
+  order: 1;
+}
+
+/* باقي الكروت */
+.statsAbout__grid .statCard:nth-child(2){
+  order: 2;
+}
+.statsAbout__grid .statCard:nth-child(3){
+  order: 3;
+}
+/* //////////////who///////////////////// */
+/* ===== Section Background (Gradient) ===== */
+.aboutCta{
+  direction: rtl;
+  background: linear-gradient(180deg,
+    #FBFDFF 0%,
+    #F1F7FC 55%,
+    #EAF2F9 100%
+  );
+  padding: 80px 0 90px;
+  overflow: hidden;
+}
+
+.aboutCta__container{
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* ===== Row Layout ===== */
+.aboutCta__row{
+  display: grid;
+  align-items: center;
+  gap: 42px;
+  margin-bottom: 70px;
+}
+
+.aboutCta__row:last-child{
+  margin-bottom: 0;
+}
+
+/* Row 1: image right / text left */
+.aboutCta__row--imgRight{
+  grid-template-columns: 1.05fr 0.95fr; /* text | image */
+}
+
+/* Row 2: image left / text right */
+.aboutCta__row--imgLeft{
+  grid-template-columns: 0.95fr 1.05fr; /* image | text */
+}
+
+/* ===== Text ===== */
+.aboutCta__text{
+  text-align: right;           /* مهم: بداية الكلام من اليمين */
+}
+
+.aboutCta__title{
+  font-size: 30px;
+  font-weight: 800;
+  color:rgba(96, 48, 189, 1);
+  margin: 0 0 14px;
+}
+
+.aboutCta__title--cta{
+  line-height: 1.6;
+}
+
+.aboutCta__title--cta span{
+  color: rgb(40,154,214);
+}
+
+.aboutCta__desc{
+  font-size: 24px;
+  font-weight: 400;
+  /* line-height: 140%; */
+  color:rgba(98, 100, 103, 1);
+  margin: 0 0 22px;
+  max-width: 54ch;
+}
+
+/* ===== Button ===== */
+.aboutCta__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 46px;
+  padding: 0 22px;
+
+  border-radius: 14px;
+  background: rgb(40,154,214);
+  color: #fff;
+  text-decoration: none;
+
+  font-weight: 800;
+  font-size: 14px;
+
+  /* يخليه يثبت مع بداية النص يمين */
+  margin-inline-start: 0;
+}
+
+/* ===== Art ===== */
+.aboutCta__art{
+  display: flex;
+  justify-content: center;
+}
+
+.aboutCta__art img{
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .aboutCta{
+    padding: 60px 0 70px;
+  }
+
+  .aboutCta__row{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 26px;
+    margin-bottom: 55px;
+  }
+
+  .aboutCta__text{
+    text-align: center;
+  }
+
+  .aboutCta__desc{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .aboutCta__btn{
+    margin: 0 auto;
+  }
+
+  /* في الموبايل خلي الصورة فوق دايمًا */
+  .aboutCta__row--imgRight .aboutCta__art{ order: 1; }
+  .aboutCta__row--imgRight .aboutCta__text{ order: 2; }
+
+  .aboutCta__row--imgLeft .aboutCta__art{ order: 1; }
+  .aboutCta__row--imgLeft .aboutCta__text{ order: 2; }
+}
+
+@media (max-width: 480px){
+  .aboutCta__title{ font-size: 22px; }
+  .aboutCta__desc{ font-size: 14px; }
+}
+.aboutCta__art{
+  position: relative;
+  isolation: isolate; /* مهم جدًا */
+}
+
+.aboutCta__art::before{
+  content: "";
+  position: absolute;
+
+  /* وسّعي المساحة حوالين الصورة */
+  inset: -50px;
+
+  z-index: -1;
+  pointer-events: none;
+
+  /* الهالة الغامقة */
+  background: radial-gradient(
+    circle at 60% 60%,
+    rgba(0, 0, 0, 0.14) 0%,
+    rgba(0, 0, 0, 0.10) 30%,
+    rgba(0, 0, 0, 0.05) 45%,
+    rgba(0, 0, 0, 0.00) 70%
+  );
+
+  filter: blur(22px);
+  opacity: 0.75;
+}
+
+.aboutSection {
+  background-color: #f7fcfd;
+}
+.aboutSection {
+  position: relative;
+}
+
+.aboutSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 75% 45%,
+    rgba(0, 140, 255, 0.08),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* //////////////////animation//////////////////////// */
+
+
+/* ========== Services Section (Black) ========== */
+.servicesSec{
+  direction: rtl;
+  background: #0F1118; /* قريب من الأسود */
+  color: #fff;
+  padding: 90px 0 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* نجوم خفيفة زي اللي في الصورة */
+.servicesSec::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.10) 0 1px, transparent 2px) 0 0/120px 120px,
+    radial-gradient(circle at 70% 40%, rgba(255,255,255,0.08) 0 1px, transparent 2px) 0 0/160px 160px,
+    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.06) 0 1px, transparent 2px) 0 0/140px 140px;
+  opacity: .45;
+  pointer-events:none;
+}
+
+.servicesSec__container{
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.servicesSec__head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; /* زي الفيجما */
+  text-align: center;
+}
+
+/* العنوان: Tajawal 800 / 64px / Center */
+.servicesSec__title{
+  margin: 0;
+  font-family: "Tajawal", system-ui;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.26;
+  color: rgba(40, 154, 214, 1); /* Brand Solid */
+}
+
+/* البراجراف: 24px bold / white / line-height 160% */
+.servicesSec__subtitle{
+  margin: 0;
+  max-width: 974px;
+  font-family: "Tajawal", system-ui;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.92);
+}
+
+/* ========== Chips Row (Hug 841 / height 64 / gap 16) ========== */
+.servicesSec__chips{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap; /* لو الشاشة ضاقت */
+}
+
+/* chip base */
+.chip{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.07);
+  background: rgba(255,255,255,0.03);
+  cursor: pointer;
+
+  /* عشان يبقى شكلها زي كبسولة */
+  min-height: 64px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Active chip (linear gradient زي اللي عندك) */
+.chip--active{
+  background: linear-gradient(135deg,
+    rgba(27, 28, 54, 1),
+    rgba(112, 113, 122, 1)
+  );
+  border-color: rgba(255,255,255,0.15);
+}
+
+/* صندوق الأيقونة: 44x44 radius 12 */
+.chip__icon{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.07);
+  display: grid;
+  place-items: center;
+
+  /* شبه اللي ظهر عندك: spread 1 */
+  box-shadow: 0 0 0 1px rgba(45,46,72,1);
+  flex: 0 0 auto;
+}
+
+.chip__icon img{
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* نص المربع: Tajawal 16 medium / اللون اللي عندك */
+.chip__text{
+  font-family: "Tajawal", system-ui;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(202, 198, 221, 1);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Hover خفيف (اختياري) */
+.chip:hover{
+  border-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 992px){
+  .servicesSec__title{ font-size: 44px; }
+  .servicesSec__subtitle{ font-size: 18px; }
+  .chip__text{ white-space: normal; } /* عشان الكلمات متتكسرش وحش */
+}
+
+@media (max-width: 480px){
+  .servicesSec{ padding: 70px 0 55px; }
+  .servicesSec__title{ font-size: 34px; }
+  .servicesSec__subtitle{ font-size: 16px; }
+  .chip{ min-height: 56px; }
+  .chip__icon{ width: 40px; height: 40px; }
+}
+/* ////////////////////card-service///////////////////////////// */
+/* ===== Cards Grid (8 cards / 2 per row) ===== */
+.srvCardsGrid{
+  width: min(1200px, 100%);
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, 584px);
+  gap: 24px; /* لو في الفيجما Gap مختلف ابعتيه واظبطه */
+  justify-content: center;
+}
+
+/* Card */
+.srvCard{
+  width: 584px;
+  height: 393px;                 /* Fixed */
+  border-radius: 24px;
+  background: rgba(29, 28, 32, 1);
+  border: 1px solid rgba(40, 154, 214, 1);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top content */
+.srvCard__top{
+  padding: 18px 18px 12px;
+}
+
+/* Title row: icon on the LEFT, title on the RIGHT (RTL look) */
+.srvCard__titleRow{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Title */
+.srvCard__title{
+  margin: 0;
+  width: 360px;
+  min-height: 15px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 160%;
+  text-align: right;
+  color: rgba(40, 154, 214, 1);
+}
+
+/* Icon box (44x44) */
+.srvCard__iconBox{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.07);
+  display: grid;
+  place-items: center;
+
+  /* Drop shadow: x0 y0 blur0 spread1 color rgba(45,46,72,1) */
+  box-shadow: 0 0 0 1px rgba(45, 46, 72, 1);
+}
+
+/* Icon itself (32x32) */
+.srvCard__icon{
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+/* Paragraph */
+.srvCard__desc{
+  margin: 10px 0 0;
+  width: 552px;
+  min-height: 36px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 160%;
+  text-align: right;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Media area */
+.srvCard__media{
+  margin-top: auto;
+  width: 584px;
+  height: 265px;
+  overflow: hidden;
+}
+
+.srvCard__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* لو صورك Illustration ومش عايزاها تتقص: خليها contain */
+}
+
+/* Hover (خفيف زي اللي قولتي عليه) */
+.srvCard{
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.srvCard:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,.35);
+}
+
+/* Responsive */
+@media (max-width: 1260px){
+  .srvCardsGrid{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .srvCard, .srvCard__media{
+    width: min(584px, 100%);
+  }
+  .srvCard__desc{
+    width: 100%;
+  }
+  .srvCard__title{
+    width: auto;
+  }
+}
+/* ////////////////animation////////////////////////// */
+/* ===== Scroll Reveal Animation (repeatable) ===== */
+
+/* الحالة الأساسية قبل ما تظهر */
+.sr {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .65s ease, transform .65s ease;
+  will-change: transform, opacity;
+}
+
+/* لما تظهر */
+.sr-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Variants (اختياري) */
+.sr-pop {
+  transform: translateY(14px) scale(.98);
+}
+.sr-pop.sr-show {
+  transform: translateY(0) scale(1);
+}
+
+/* Stagger للكروت */
+.sr-stagger {
+  opacity: 0;
+  transform: translateY(18px) scale(.985);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.sr-stagger.sr-show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* احترام تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+  .sr, .sr-stagger {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leen</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+VN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero__container">
+
+
+    <!-- Top Bar -->
+    <div class="topbar">
+       <div class="topbar__left">
+        <img class="topbar__brand" src="images/Leen-logo.png" alt="Leen">
+      </div>
+      <nav class="nav" aria-label="Main Navigation">
+        <a class="nav__link nav__link--active" href="#">الرئيسية</a>
+        <a class="nav__link" href="#who">من نحن</a>
+        <a class="nav__link" href="#services">خدماتنا</a>
+        <a class="nav__link" href="#solutions">الحلول</a>
+        <a class="nav__link" href="#works">أعمالنا</a>
+        <a class="nav__link" href="#contact">تواصل معنا</a>
+      </nav>
+
+    <button class="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+
+
+       <div class="topbar__right">
+        <img class="topbar__logo" src="images/vision.png" alt="Vision 2030">
+      </div>
+    </div>
+    <div class="mobileNav" id="mobileNav" aria-hidden="true">
+  <button class="mobileNav__close" aria-label="إغلاق القائمة">×</button>
+
+  <a class="mobileNav__link" href="#">الرئيسية</a>
+  <a class="mobileNav__link" href="#who">من نحن</a>
+  <a class="mobileNav__link" href="#services">خدماتنا</a>
+  <a class="mobileNav__link" href="#solutions">الحلول</a>
+  <a class="mobileNav__link" href="#works">أعمالنا</a>
+  <a class="mobileNav__link" href="#contact">تواصل معنا</a>
+</div>
+
+<div class="mobileNavOverlay" id="mobileNavOverlay"></div>
+
+
+    <!-- Hero Text -->
+    <div class="heroText">
+      <h1 class="heroText__title">حلول تقنية ذكية تدفع أعمالك نحو المستقبل</h1>
+
+      <p class="heroText__desc">
+        في لين للحلول الذكية نقدم حلولًا رقمية متكاملة تساعد الشركات على التطور والنمو من خلال أحدث
+        تقنيات البرمجة، التصميم، الشبكات، والتسويق الإلكتروني.
+      </p>
+
+      <div class="heroText__actions">
+        <a class="btn btn--primary" href="#services">خدماتنا</a>
+        <a class="btn btn--ghost" href="#contact">تواصل معنا</a>
+      </div>
+    </div>
+<div class="header-bottom">
+  <div class="stars">
+    <img src="images/stars.png" alt="rating">
+    <p class="stars-p">4.9/5 من 3,940 عميل</p>
+  </div>
+
+  <div class="partners">
+    <img src="images/container.png" alt="partners">
+  </div>
+
+  <!-- المستطيل اللي نصه فوق ونصه تحت -->
+  <div class="info-pill">
+
+    <p>نقدم مجموعة متكاملة من الخدمات التقنية التي تناسب جميع أنواع الأعمال.</p>
+        <span class="info-pill__icon">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+
+  </div>
+</div>
+
+</div>
+</header>
+<section class="statsAbout" id="stats">
+
+  <div class="statsAbout__container">
+    <h2 class="statsAbout__title">أرقام نفتخر بها</h2>
+
+    <div class="statsAbout__grid">
+      <!-- 1 -->
+      <div class="statCard">
+        <div class="statCard__icon">
+          <img src="images/icon6.png" alt="مشاريع">
+        </div>
+        <div class="statCard__text">
+          <div class="statCard__value counter" data-target="300" data-plus="true">0</div>
+          <div class="statCard__label">مشروع مكتمل</div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="statCard">
+        <div class="statCard__icon">
+          <img src="images/Icon4.png" alt="دعم فني">
+        </div>
+        <div class="statCard__text">
+          <div class="statCard__value">7 / 24</div>
+          <div class="statCard__label">دعم فني</div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="statCard">
+        <div class="statCard__icon">
+          <img src="images/Icon2.png" alt="عملاء">
+        </div>
+        <div class="statCard__text">
+          <div class="statCard__value counter" data-target="100" data-plus="true">0</div>
+          <div class="statCard__label">عميل جديد</div>
+        </div>
+      </div>
+
+      <!-- 4 active -->
+      <div class="statCard statCard--active">
+        <div class="statCard__icon">
+          <img src="images/icon1.png" alt="خبرة">
+        </div>
+        <div class="statCard__text">
+          <div class="statCard__value counter" data-target="10" data-plus="true">0</div>
+          <div class="statCard__label">سنوات خبرة</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="aboutCta" id="aboutCta">
+  <div class="aboutCta__container">
+
+    <!-- ===== Row 1 (Image Right / Text Left) ===== -->
+    <div class="aboutCta__row aboutCta__row--imgRight">
+<div class="aboutCta__art">
+        <img src="images/who1.png" alt="About illustration">
+      </div>
+      <div class="aboutCta__text">
+        <h2 class="aboutCta__title">من نحن</h2>
+
+        <p class="aboutCta__desc">
+          لين للحلول الذكية شركة متخصصة في تقديم حلول تقنية متكاملة في مجال تكنولوجيا المعلومات والاتصالات.
+          نعمل على مساعدة الشركات والمؤسسات في تحقيق التحول الرقمي ورفع كفاءة أعمالهم باستخدام أحدث التقنيات
+          والحلول الذكية. نؤمن بأن التكنولوجيا لم تعد خيارًا، بل ضرورة لنجاح أي عمل.
+        </p>
+
+        <a class="aboutCta__btn" href="#">تعرف علينا أكثر</a>
+      </div>
+
+   
+
+    </div>
+
+    <!-- ===== Row 2 (Image Left / Text Right) ===== -->
+    <div class="aboutCta__row aboutCta__row--imgLeft">
+
+    
+      <div class="aboutCta__text">
+        <h2 class="aboutCta__title aboutCta__title--cta">
+          ابدأ الآن واترك لنا مهمة تحويل فكرتك إلى
+          حل رقمي احترافي.
+        </h2>
+
+        <p class="aboutCta__desc">
+          انطلق بفكرتك، ومع فريق خبراء رؤى المستقبل يحولها إلى واقع رقمي ملموس.
+          نصمم وننفذ بأحدث التقنيات لتحقيق رؤيتك.
+        </p>
+
+        <a class="aboutCta__btn" href="#">تعرف علينا أكثر</a>
+      </div>
+ <div class="aboutCta__art">
+        <img src="images/who2.png" alt="CTA illustration">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</section>
+<section class="servicesSec" id="services">
+  <div class="servicesSec__container">
+
+    <header class="servicesSec__head">
+      <h2 class="servicesSec__title">خدماتنا المتميزة</h2>
+      <p class="servicesSec__subtitle">
+        نقدم مجموعة متكاملة من الخدمات التقنية التي تناسب جميع أنواع الأعمال الى 4 محاور رئيسية.
+      </p>
+
+      <!-- المربعات الصغيرة -->
+      <div class="servicesSec__chips" role="tablist" aria-label="تصنيفات الخدمات">
+
+        <!-- chip (active) -->
+        <button class="chip chip--active" type="button" role="tab" aria-selected="true">
+          <span class="chip__icon">
+            <img src="images/monitor.png" alt="">
+          </span>
+          <span class="chip__text">خدمات الكمبيوتر و السيرفرات</span>
+        </button>
+
+        <button class="chip" type="button" role="tab" aria-selected="false">
+          <span class="chip__icon">
+            <img src="images/briefcase.png" alt="">
+          </span>
+          <span class="chip__text">التدريب</span>
+        </button>
+
+        <button class="chip" type="button" role="tab" aria-selected="false">
+          <span class="chip__icon">
+            <img src="images/clipboard-tick.png" alt="">
+          </span>
+          <span class="chip__text">الحلول الاستشارية</span>
+        </button>
+
+        <button class="chip" type="button" role="tab" aria-selected="false">
+          <span class="chip__icon">
+            <img src="images/code.png" alt="">
+          </span>
+          <span class="chip__text">حلول البرمجيات</span>
+        </button>
+
+      </div>
+    </header>
+
+  </div>
+  <div class="srvCardsGrid">
+
+  <!-- كرري الكارت ده 8 مرات وغيري المحتوى والصور -->
+  <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+
+        <h3 class="srvCard__title">برامج تخطيط موارد الشركات (ERP)</h3>
+      </div>
+
+      <p class="srvCard__desc">
+        حلول متكاملة لإدارة أعمالك بكفاءة عالية، تشمل إدارة الموارد المالية والبشرية والتشغيلية،
+        وتساعدك على تنظيم أعمالك واتخاذ قرارات بناءً على بيانات موثوقة.
+      </p>
+    </div>
+
+    <div class="srvCard__media">
+      <img src="images/sr.png" alt="ERP">
+    </div>
+  </article>
+
+  <!-- Card 2 -->
+  <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">خدمات التصميم والدعاية</h3>
+      </div>
+      <p class="srvCard__desc">
+ تصميم هويات بصرية متكاملة وشعارات فريدة ومواد ترويجية مبتكرة تعكس جوهر علامتك التجارية وتضمن تميزها في السوق. نصمم كل شيء باحترافية عالية.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi2.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">خدمات التصميم والدعاية</h3>
+      </div>
+      <p class="srvCard__desc">
+ تصميم هويات بصرية متكاملة وشعارات فريدة ومواد ترويجية مبتكرة تعكس جوهر علامتك التجارية وتضمن تميزها في السوق. نصمم كل شيء باحترافية عالية.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi2.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">التسويق الإلكتروني</h3>
+      </div>
+      <p class="srvCard__desc">
+ نقدم حلول تسويقية مبتكرة تشمل تحسين محركات البحث، التسويق بالمحتوى، وإعلانات السوشيال ميديا، لتعزيز علامتك التجارية وزيادة تفاعل العملاء المحتملين.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi3.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">التجارة الإلكترونية</h3>
+      </div>
+      <p class="srvCard__desc">
+تصميم وتطوير متاجر إلكترونية متكاملة تزيد المبيعات وتحسن تجربة المستخدم، مع دعم فني متواصل وحلول تسويقية مبتكرة.ة.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi4.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">الحلول الاستشارية</h3>
+      </div>
+      <p class="srvCard__desc">
+نقدم في لين استشارات تقنية متكاملة تهدف إلى تحسين الأداء التشغيلي واختيار الحلول المثلى التي تدعم نمو أعمالك وتوسعها بكفاءة وفاعلية.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi5.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">تصميم وتطوير المواقع الإلكترونية</h3>
+      </div>
+      <p class="srvCard__desc">
+ نصمم مواقع ويب عصرية ومتجاوبة، تجمع بين الأداء القوي والتصميم الجذاب، لتقديم تجربة مستخدم فريدة وتحقيق أهداف أعمالك بكفاءة.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/servi6.png" alt="Marketing">
+    </div>
+  </article>
+
+    <article class="srvCard">
+    <div class="srvCard__top">
+      <div class="srvCard__titleRow">
+        <span class="srvCard__iconBox">
+          <img class="srvCard__icon" src="images/icon-service.png" alt="">
+        </span>
+        <h3 class="srvCard__title">تطبيقات الهواتف الذكية</h3>
+      </div>
+      <p class="srvCard__desc">
+تصميم وتطوير تطبيقات جوال مبتكرة لمنصات iOS و Android، مع التركيز على تجربة المستخدم المتميزة وأحدث التقنيات لضمان نجاح مشروعك.
+      </p>
+    </div>
+    <div class="srvCard__media">
+      <img src="images/serv7.png" alt="Marketing">
+    </div>
+  </article>
+
+
+</div>
+
+</section>
+
+
+<script src="stats.js"></script>
+
+
+
+
+
+
+
+     <script src="js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>
