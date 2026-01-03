@@ -888,7 +888,7 @@ body.nav-open .mobileNavOverlay{
   max-width: 974px;
   font-family: "Tajawal", system-ui;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
 }
@@ -968,14 +968,14 @@ body.nav-open .mobileNavOverlay{
 /* ========== Responsive ========== */
 @media (max-width: 992px){
   .servicesSec__title{ font-size: 44px; }
-  .servicesSec__subtitle{ font-size: 18px; }
-  .chip__text{ white-space: normal; } /* عشان الكلمات متتكسرش وحش */
+  .servicesSec__subtitle{ font-size: 16px; }
+  .chip__text{ white-space: nowrap; } /* عشان الكلمات متتكسرش وحش */
 }
 
 @media (max-width: 480px){
   .servicesSec{ padding: 70px 0 55px; }
   .servicesSec__title{ font-size: 34px; }
-  .servicesSec__subtitle{ font-size: 16px; }
+  .servicesSec__subtitle{ font-size: 10px; }
   .chip{ min-height: 56px; }
   .chip__icon{ width: 40px; height: 40px; }
 }
@@ -2362,4 +2362,64 @@ height:16px ;
   to {
     clip-path: inset(0 0 0 0);
   }
+}
+/* /////////////redidine//////////////////////// */
+/* ========== SERVICES CARDS MOBILE FIX (PUT LAST) ========== */
+@media (max-width: 768px){
+
+  .srvCardsGrid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding-inline: 12px;
+  }
+
+  .srvCard{
+    width: 100% !important;
+    height: auto !important;        /* ✅ أهم سطر */
+    border-radius: 18px;
+    overflow: visible;               /* ✅ امنعي القص */
+  }
+
+  .srvCard__top{
+    padding: 14px 14px 10px;
+  }
+
+  .srvCard__titleRow{
+    align-items: flex-start;         /* بدل end عشان ما يزقش النص */
+    gap: 10px;
+  }
+
+  .srvCard__title{
+    width: auto !important;
+    white-space: normal !important;  /* ✅ العنوان يلف */
+    line-height: 1.6;
+    font-size: 18px;
+  }
+
+  .srvCard__desc{
+    width: auto !important;
+    min-height: auto !important;
+    font-size: 14px;
+    line-height: 1.75;
+    overflow: visible;
+  }
+
+  .srvCard__media{
+    width: 100% !important;
+    height: auto !important;         /* ✅ بدل 265px */
+    overflow: hidden;
+  }
+
+  .srvCard__media img{
+    width: 100%;
+    height: auto;                    /* ✅ الصورة متقصش النص */
+    display: block;
+    object-fit: cover;
+  }
+}
+
+/* موبايل صغير قوي */
+@media (max-width: 420px){
+  .srvCard__title{ font-size: 16px; }
+  .srvCard__desc{ font-size: 13px; }
 }
