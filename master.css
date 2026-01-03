@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;}
 body{font-family:"Tajawal",sans-serif;overflow-x:hidden}
 
 
@@ -2422,4 +2422,89 @@ height:16px ;
 @media (max-width: 420px){
   .srvCard__title{ font-size: 16px; }
   .srvCard__desc{ font-size: 13px; }
+}
+
+
+
+/* =========================
+   CTA BOX - ONE SHAPE ALL SIZES
+   ========================= */
+
+.footer-cta{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* الفورم */
+.cta-form{
+  display:flex;
+  width: 100%;
+  justify-content: flex-start; /* الديسكتوب */
+}
+
+/* البوكس الأبيض (الكبسولة) */
+.cta-box{
+  width: min(520px, 100%);   /* على الكبير شكل ثابت وعلى الصغير يتمدد */
+  height: 56px;
+  background:#fff;
+  border-radius: 16px;
+  padding: 8px;
+
+  display:flex;
+  align-items:center;
+  gap: 10px;
+
+  direction: rtl;           /* مهم */
+  overflow: hidden;         /* يقفل أي حتة بيضا طالعة برّه */
+  box-sizing: border-box;
+}
+
+/* input */
+.cta-box input{
+  flex: 1;
+  min-width: 0;             /* مهم عشان ما يعملش overflow */
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0 14px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* button (على اليمين في RTL تلقائيًا) */
+.cta-box button{
+  flex: 0 0 auto;
+  height:80%;
+  padding: 0px 20px;
+  border: 0;
+  /* border-radius: 12px; */
+  background: rgba(40,154,214,1);
+  color:#fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 900px){
+  .footer-cta{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cta-form{
+    justify-content: center;   /* يخليها في النص في الموبايل */
+  }
+}
+
+/* موبايلات صغيرة 360 / 320 */
+@media (max-width: 360px){
+  .cta-box{ height: 52px; padding: 6px; }
+  .cta-box button{ padding: 0 14px; font-size: 13px; border-radius: 11px; }
+  .cta-box input{ font-size: 13px; padding: 0 10px; }
 }
