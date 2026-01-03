@@ -3,6 +3,47 @@ const mobileNav = document.getElementById('mobileNav');
 const overlay = document.getElementById('mobileNavOverlay');
 const closeBtn = document.querySelector('.mobileNav__close');
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll(".nav__link");
+  const sections = document.querySelectorAll("section[id]");
+
+  /* =========================
+     1️⃣ CLICK → فعّل اللينك
+  ========================== */
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.forEach(l => l.classList.remove("nav__link--active"));
+      link.classList.add("nav__link--active");
+    });
+  });
+
+  /* =========================
+     2️⃣ SCROLL → Scroll Spy
+  ========================== */
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove("nav__link--active"));
+
+          const activeLink = document.querySelector(
+            `.nav__link[href="#${entry.target.id}"]`
+          );
+
+          if (activeLink) {
+            activeLink.classList.add("nav__link--active");
+          }
+        }
+      });
+    },
+    {
+      threshold: 0.6
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
+});
+
 function openNav(){
   document.body.classList.add('nav-open');
   toggleBtn?.setAttribute('aria-expanded','true');
@@ -153,3 +194,43 @@ document.querySelectorAll('.mobileNav__link').forEach(a=>{
   cards.forEach(card => cardsObserver.observe(card));
 
 })();
+/////////////////////vector//////////////////////////////////////
+// js/how.js
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".js-reveal");
+  if (!items.length) return;
+
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) e.target.classList.add("is-visible");
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach((el) => io.observe(el));
+});
+///////////////////animation2////////////////////////////////
+document.addEventListener("DOMContentLoaded", () => {
+  const howSection = document.querySelector(".how");
+
+  if (!howSection) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          howSection.classList.add("is-visible");
+        } else {
+          howSection.classList.remove("is-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.3 // يبدأ الأنيميشن لما 30% من السكشن يبان
+    }
+  );
+
+  observer.observe(howSection);
+});

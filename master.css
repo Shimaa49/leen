@@ -6,6 +6,8 @@ html{scroll-behavior:smooth}
 body{font-family:"Tajawal",sans-serif;overflow-x:hidden}
 
 
+
+
 .hero{
   height:110vh; 
   background:url("images/BG.png") center/cover no-repeat;
@@ -1009,8 +1011,8 @@ body.nav-open .mobileNavOverlay{
 /* Title row: icon on the LEFT, title on the RIGHT (RTL look) */
 .srvCard__titleRow{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+align-items: end;
+ justify-content: right;
   gap: 12px;
 }
 
@@ -1024,20 +1026,20 @@ body.nav-open .mobileNavOverlay{
   font-size: 24px;
   line-height: 160%;
   text-align: right;
-  color: rgba(40, 154, 214, 1);
+  color: rgba(253, 253, 253, 1);
+  white-space: nowrap;
+
 }
 
 /* Icon box (44x44) */
 .srvCard__iconBox{
   width: 44px;
   height: 44px;
-  border-radius: 12px;
-  background: rgba(255,255,255,0.07);
+  /* border-radius: 12px; */
+
   display: grid;
   place-items: center;
-
-  /* Drop shadow: x0 y0 blur0 spread1 color rgba(45,46,72,1) */
-  box-shadow: 0 0 0 1px rgba(45, 46, 72, 1);
+ /* box-shadow: 0 0 0 1px rgba(45, 46, 72, 1); */
 }
 
 /* Icon itself (32x32) */
@@ -1046,6 +1048,7 @@ body.nav-open .mobileNavOverlay{
   height: 32px;
   border-radius: 5px;
   object-fit: contain;
+
 }
 
 /* Paragraph */
@@ -1142,5 +1145,1221 @@ body.nav-open .mobileNavOverlay{
     transition: none !important;
     transform: none !important;
     opacity: 1 !important;
+  }
+
+}
+
+/* ====== Why Leen Section ====== */
+.leyn-why{
+  padding: 70px 0 80px;
+  background: #f7f7f7;   /* قريب من اللي في الصورة */
+  direction: rtl;
+  font-family: "Tajawal", sans-serif;
+}
+
+.leyn-why .container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* top line + logo */
+.leyn-why__brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.leyn-why__line{
+  flex: 1;
+  height: 2px;
+background: linear-gradient(
+    270deg,
+    rgba(93, 46, 192, 0) 0%,
+    rgba(66, 100, 202, 1) 50%,
+    rgba(34, 167, 217, 1) 100%
+  );
+  max-width: 490px;
+}
+
+.leyn-why__logo{
+  width: 117px;
+  height: 169px;
+  display: grid;
+  place-items: center;
+}
+
+.leyn-why__logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* title */
+.leyn-why__title{
+  text-align: center;
+  color: rgba(96, 48, 189, 1);  
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0 0 25px;
+}
+
+/* big image card */
+.leyn-why__media{
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+
+  border: 2px solid #cfd6df; /* بوردر خفيف */
+  background: #fff;
+
+  /* مساحة زي الصورة */
+  height: 520px;
+}
+
+.leyn-why__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px){
+  .leyn-why{
+    padding: 50px 0 60px;
+  }
+
+  .leyn-why__title{
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .leyn-why__logo{
+    width: 56px;
+    height: 56px;
+  }
+
+  .leyn-why__line{
+    max-width: 220px;
+  }
+
+  .leyn-why__media{
+    height: 260px;
+    border-radius: 20px;
+  }
+}
+
+
+/* لو الخط مش متحطوط عندك */
+
+.features-section{
+  font-family: "Tajawal", sans-serif;
+  padding: 60px 0;
+}
+
+.container{
+  width: min(1200px, 100% - 40px); /* نفس Fill 1200px */
+  margin: 0 auto;
+}
+
+/* سكشن كله: صفين، كل صف 3 */
+.features-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  gap: 20px; /* Gap 20px */
+}
+
+/* الكارت */
+.feature-card{
+  background-image: url(images/bg-leen.png);        /* Background/Card */
+  border: 1px solid rgba(229, 229, 230, 1);    /* Border/Light */
+  border-radius: 20px;                          /* Radius 20 */
+  padding: 10px;                                /* Padding 20 */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;  
+  width: 360px;
+  background-repeat:no-repeat ;
+                                    /* Gap 16 */
+}
+
+/* صندوق الأيقونة */
+.icon-box{
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(242, 242, 242, 1);          /* Background/Main Screen */
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+.icon-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* العنوان */
+.feature-title{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;                             /* Bold 24 */
+  line-height: 160%;
+  color: rgba(37, 37, 39, 1);  
+  padding: 0;                 /* Color/H1 */
+}
+
+/* البراجراف */
+.feature-desc{
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;                             /* Medium 16 */
+  line-height: 160%;
+  color: rgba(198, 200, 203, 1);                /* Color/Paragraph */
+}
+
+/* الكارت المميز (اللي لونه أزرق خفيف) */
+.feature-card:hover{
+background:
+  linear-gradient(
+    135deg,
+    rgba(255,255,255,0.25),
+    rgba(255,255,255,0.25)
+  ),
+  linear-gradient(
+    135deg,
+    rgba(93, 46, 192, 1),
+    rgba(66, 100, 202, 1),
+    rgba(34, 167, 217, 1)
+  );
+
+border: 1px solid rgba(93, 46, 192, 0.05);
+;
+}
+/* Responsive */
+@media (max-width: 992px){
+  .features-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px){
+  .features-grid{ grid-template-columns: 1fr; }
+}
+
+
+
+
+
+
+/* ====== HOW SECTION (Figma Exact Base) ====== */
+
+
+.how{
+  background: rgba(24, 25, 34, 1);       /* Background/Main Screen */
+  width: 100%;
+}
+
+.how__inner{
+  /* Frame 1707480160 */
+  width: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+
+  /* Height Hug (533.59px) */
+  min-height: 550.59px;
+
+  padding: 100px 120px;  /* Top/Bottom 60, Right/Left 120 */
+  position: relative;
+  box-sizing: border-box;
+  direction: rtl;
+  font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+/* ====== Inner big container (Frame 1410127001) ====== */
+.how__inner::before{
+  content:"";
+  position:absolute;
+  inset: 100px 120px; /* نفس Padding بتاع الفريم الكبير */
+  pointer-events:none;
+}
+
+/* ====== Head group (Frame 1707480164) ====== */
+.how__head{
+  /* Hug(384) + Hug(76) + Gap 20 */
+  width: 384px;
+  min-height: 76px;
+
+  position: absolute;
+  /* خليته يمين فوق زي الديزاين */
+  top: 60px;          /* داخل الفريم */
+  right: 120px;       /* داخل الفريم */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.how__title{
+  margin: 0;
+  font-size: 32px;    /* ExtraBold 32 */
+  font-weight: 800;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.how__desc{
+  margin: 0;
+  width: 384px;       /* Layout width */
+  font-size: 16px;    /* Medium 16 */
+  font-weight: 500;
+  line-height: 160%;
+  color: rgba(174, 174, 174, 1);
+}
+
+/* ====== Wave image (Vector 335) ====== */
+.how__wave{
+  position: absolute;
+
+  /* Width/Height */
+  width: 944.17px;
+  height: 279px;
+
+  /* Top/Left relative للـ inner container */
+  top: 24.79px;
+  left: 247.96px;
+
+  /* Rotation :-180deg; */
+  /* transform: rotate(180deg); */
+
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ====== Icons (Not images) ======
+   Outer: 59.42 x 45.18, radius 14.12, white
+   Inner pill: 21.35 x 16.24, radius 7.06, Brand Gradient
+*/
+.how__icon{
+  position: absolute;
+  width: 59.42px;
+  height: 45.18px;
+  border-radius: 14.12px;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+.how__icon::after{
+  content:"";
+  position:absolute;
+  width: 21.35px;
+  height: 16.24px;
+  border-radius: 7.06px;
+
+  /* Brand Gradient */
+  background: linear-gradient(90deg,
+    rgba(93, 46, 192, 1),
+    rgba(66, 100, 202, 1),
+    rgba(34, 167, 217, 1)
+  );
+
+  /* centered */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ====== Icons positions from your screenshots ====== */
+.how__icon--1{ top: 15px; left: 250.27px; }   /* (1) */
+.how__icon--2{ top: 116.83px; left: 473.75px; } /* (2) */
+.how__icon--3{ top: 160.83px; left: 768.04px; } /* (3) */
+ .how__icon--4{
+  top: 215px;
+  left: 1120.58px;
+} 
+
+
+
+
+/* ====== Responsive (اختياري) ====== */
+@media (max-width: 1400px){
+  .how__inner{ padding: 50px 60px; min-height: auto; }
+  .how__head{ right: 60px; top: 50px; }
+  .how__grid{ width: min(1200px, 100%); }
+}
+
+@media (max-width: 992px){
+  .how__head{
+    position: static;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .how__desc{ width: 100%; }
+  .how__wave,
+  .how__icon{ display:none; } /* للموبايل نخفيهم عشان ما يبوظش */
+  .how__grid{ grid-template-columns: 1fr; padding-top: 0; gap: 22px; }
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 1400px){
+  .how__steps{
+    width: min(1200px, calc(100% - 120px));
+    left: 60px;
+    transform: none;
+  }
+}
+
+@media (max-width: 992px){
+  .how__steps{
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+    left: auto;
+    top: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 20px;
+  }
+  .how__step{
+    position: static;
+    width: 100% !important;
+  }
+}
+
+
+
+
+
+
+
+
+/* //////////////footer///////////////////////////////// */
+.leen-footer{
+  direction: rtl;
+  background: rgba(242, 242, 242, 1);
+  padding: 60px 0 25px;
+}
+
+.container{
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* ===== CTA BAR ===== */
+.footer-cta{
+  background: rgba(40, 154, 214, 1);
+  border-radius: 18px;
+  padding: 28px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: #fff;
+}
+
+.footer-cta h3{
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 160%;
+}
+
+.footer-cta p{
+  margin: 6px 0 0;
+  opacity: .9;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+.input-wrap{
+  position: relative;
+  width: 320px;
+  max-width: 55vw;
+}
+
+.input-wrap input{
+  width: 100%;
+  height: 44px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  padding: 0 44px 0 14px;
+  font-size: 14px;
+}
+
+.mail-ico{
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: .6;
+}
+
+.cta-form button{
+  height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,.25);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta-form button:hover{
+  background: rgba(255,255,255,.35);
+}
+
+.cta-form{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.email-box{
+  position: relative;
+  width: 420px;
+  max-width: 100%;
+}
+
+.email-box input{
+  width: 100%;
+  height: 52px;
+  border: 0;
+  outline: 0;
+  border-radius: 14px;
+  padding: 0 18px 0 110px; /* مساحة للزر */
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.email-box button{
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 10px;
+  background: #2aa7d9;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.email-box button:hover{
+  background: #1f8fc0;
+}
+
+/* ===== MAIN GRID ===== */
+.footer-main{
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.footer-col h4{
+  margin: 0 0 14px;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.footer-col ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-col a{
+  color: #6b6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer-col a:hover{
+  color: #4264ca;
+}
+
+.footer-brand{
+  text-align: center;
+}
+
+.brand-desc{
+  margin: 0 0 12px;
+  color: #6b6b6b;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.brand-logo{
+  width: 540px;      /* أو المقاس اللي عندك */
+  height: 150px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;   /* مهم جدًا */
+}
+.social-title{
+  margin-top: 8px;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.social img{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.social a{
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  background: rgba(30, 41, 57, 1);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.social a:hover{
+  background: #4264ca;
+}
+
+/* ===== INFO ROW ===== */
+.footer-info{
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+}
+
+.info-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-ico{
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+
+}
+
+.info-title{
+  font-weight: 500;
+  color: rgba(75, 87, 104, 1);
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.info-link{
+  color: #4264ca;
+  font-weight: 800;
+  font-size: 16px;
+  text-decoration: none;
+}
+.info-ico img{
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+/* ===== COPYRIGHT ===== */
+.footer-copy{
+  text-align: center;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,.08);
+  color: rgba(75, 87, 104, 1);
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px){
+  .footer-cta{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .cta-form{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .input-wrap{
+    width: min(420px, 100%);
+    max-width: 100%;
+  }
+
+  .footer-main{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-info{
+    grid-template-columns: 1fr;
+  }
+}
+.cta-box{
+  width: 480px;
+  height: 60px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.cta-box input{
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-right: 12px;
+}
+
+.cta-box button{
+  height: 100%;
+  padding: 0 28px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(40, 154, 214, 1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cta-box button:hover{
+  background: #1f8fc0;
+}
+input::placeholder {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 46, 192, 1),
+    rgba(66, 100, 202, 1),
+    rgba(34, 167, 217, 1)
+  );
+
+
+  -webkit-text-fill-color: transparent;
+}
+.cta-icon img{
+  width: 16px;
+height:16px ;
+
+}
+@media (max-width: 900px){
+  .footer-cta{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .cta-box{
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+@media (max-width: 600px){
+
+  .footer-cta{
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .cta-text h3{
+    font-size: 20px;
+  }
+
+  .cta-text p{
+    font-size: 14px;
+  }
+
+  .cta-box{
+    width: 100%;
+    height: 54px;
+    padding: 6px;
+  }
+
+  .cta-box input{
+    font-size: 14px;
+  }
+
+  .cta-box button{
+    padding: 0 18px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 420px){
+
+  .cta-box{
+    flex-direction: row;
+    height: auto;
+    padding: 6px;
+  }
+
+  .cta-box button{
+    height: 44px;
+  }
+}
+@media (max-width: 768px){
+
+  /* CTA */
+  .footer-cta{
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .cta-box{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* MAIN FOOTER */
+  .footer-main{
+    grid-template-columns: 1fr;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footer-col{
+    align-items: center;
+  }
+
+  .footer-col ul{
+    justify-items: center;
+  }
+
+  /* BRAND */
+  .footer-brand{
+    order: 3;
+    text-align: center;
+  }
+
+  .brand-logo{
+    margin: 0 auto 12px;
+  }
+
+  /* SOCIAL */
+  .social{
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  /* INFO ROW */
+  .footer-info{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .info-item{
+    justify-content: center;
+  }
+
+  /* COPYRIGHT */
+  .footer-copy{
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+}
+@media (max-width: 480px){
+  .footer-col h4{
+    font-size: 16px;
+  }
+
+  .footer-col a{
+    font-size: 14px;
+  }
+
+  .info-title{
+    font-size: 16px;
+  }
+
+  .info-link{
+    font-size: 14px;
+  }
+}
+/* ظظظظظظظظظظظظظظظظظظظظظظظظظظظظ */
+/* =========================
+   FOOTER MOBILE FIX (LAST)
+   ========================= */
+
+/* icon class fix */
+.cta-icon{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+/* placeholder gradient (صح) */
+.cta-box input::placeholder{
+  background: linear-gradient(90deg,
+    rgba(93, 46, 192, 1),
+    rgba(66, 100, 202, 1),
+    rgba(34, 167, 217, 1)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* بدل -webkit-text-fill بس */
+  opacity: 1;
+}
+
+/* خلي الـ container ما يلمسش الحواف */
+.leen-footer .container{
+  padding-inline: 16px;
+}
+
+/* ========== Tablet & Mobile ========== */
+@media (max-width: 768px){
+
+  /* CTA */
+  .footer-cta{
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 14px;
+    padding: 18px 16px;
+  }
+
+  .footer-cta h3{ font-size: 20px; }
+  .footer-cta p{ font-size: 14px; }
+
+  .cta-box{
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    padding: 6px;
+    border-radius: 16px;
+  }
+
+  .cta-box input{
+    font-size: 14px;
+    padding-right: 10px;
+  }
+
+  .cta-box button{
+    height: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 12px;
+    white-space: nowrap;
+  }
+
+  /* MAIN GRID */
+  .footer-main{
+    grid-template-columns: 1fr;
+    gap: 22px;
+    text-align: center;
+    margin-top: 22px;
+  }
+
+  .footer-col ul{
+    justify-items: center;
+  }
+
+  /* brand/logo لازم يبقى responsive */
+  .brand-logo{
+    width: 100% !important;     /* يكسر 540px */
+    max-width: 220px;           /* شكل حلو في الموبايل */
+    height: auto !important;    /* يكسر 150px */
+    margin: 0 auto 10px;
+  }
+  .brand-logo img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* SOCIAL */
+  .social{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* INFO */
+  .footer-info{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .info-item{
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info-title{ font-size: 16px; }
+  .info-link{ font-size: 14px; }
+
+  /* COPYRIGHT */
+  .footer-copy{
+    font-size: 13px;
+    padding: 12px 6px;
+  }
+}
+
+/* ========== Small phones ========== */
+@media (max-width: 420px){
+  .cta-box{
+    height: 50px;
+  }
+  .cta-box button{
+    padding: 0 12px;
+  }
+}
+/* //////////////ahin///////////////////// */
+/* =========================
+   FOOTER FINAL MOBILE FIX
+   ضع هذا في آخر الـ CSS
+   ========================= */
+
+/* 1) CTA input + button داخل البوكس زي الديسكتوب */
+.cta-box{
+  position: relative;          /* مهم */
+}
+
+.cta-box button{
+  position: absolute;
+  left: 10px;                  /* حركيه يمين/شمال بتعديل الرقم */
+  top: 50%;
+  transform: translateY(-50%);
+  height: calc(100% - 12px);   /* يحافظ عليه جوه البوكس */
+  border-radius: 12px;
+  padding: 0 18px;
+  white-space: nowrap;
+}
+
+/* مساحة للزر داخل الانبوت */
+.cta-box input{
+  padding-left: 95px;          /* مهم عشان النص ما يخبطش في زرار ارسال */
+}
+
+/* 2) منع لوجو الفوتر من تكسير الموبايل */
+@media (max-width: 768px){
+  .brand-logo{
+    width: 100% !important;     /* يكسر 540px */
+    max-width: 240px;           /* حجم مناسب */
+    height: auto !important;    /* يكسر 150px */
+    margin: 0 auto 12px;
+  }
+  .brand-logo img{
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* 3) ترتيب الـ info في الموبايل بشكل نظيف */
+  .footer-info{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .info-item{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+/* 4) للموبايلات الصغيرة قوي */
+@media (max-width: 420px){
+  .cta-box{
+    height: 52px;
+  }
+  .cta-box button{
+    left: 8px;
+    padding: 0 14px;
+  }
+  .cta-box input{
+    padding-left: 88px;
+  }
+}
+/* خلي العناصر فوق بعض صح */
+.how__wave{ z-index: 1; }
+.how__icon{ z-index: 2; }
+.how__head{ z-index: 3; }
+
+.how__steps{
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+}
+
+/* شكل الكارت */
+.how__step{
+  position: absolute;
+  width: 284px;          /* عرض الكارت زي اللي عندك */
+  max-width: 284px;
+  text-align: right;
+}
+
+.how__step h3{
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 160%;
+}
+
+.how__step p{
+  margin: 0;
+  color: rgba(174,174,174,1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 180%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: unset; /* مهم: ميقصّش الكلام */
+  overflow: visible;
+}
+
+/* ====== أماكن الكروت تحت الأيقونات (بنفس ترتيب الصورة) ======
+   الفكرة: top = top بتاع الايقونة + 60 تقريباً
+   left: حوالين الايقونة مع شوية offset بسيط */
+
+.how__step--1{
+  top: calc(15px + 60px);
+  left: 0px;          /* في التصميم 1 على الشمال */
+}
+
+.how__step--2{
+  top: calc(116.83px + 60px);
+  left: 294px;        /* قريبة من الايقونة 2 */
+}
+
+.how__step--3{
+  top: calc(160.83px + 90px);
+  left: 610px;        /* قريبة من الايقونة 3 */
+}
+
+.how__step--4{
+  top: calc(215px + 60px);
+  left: 912px;        /* قريبة من الايقونة 4 (يمين) */
+}
+
+/* ====== موبايل: نخليها قائمة تحت بعض ====== */
+@media (max-width: 992px){
+  .how__wave, .how__icon{ display:none; }
+
+  .how__steps{
+    position: static;
+    inset: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .how__step{
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.how {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.how.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.how__icon {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.how.is-visible .how__icon {
+  animation: pop 0.6s ease forwards;
+}
+
+.how.is-visible .how__icon--1 { animation-delay: 0.4s; }
+.how.is-visible .how__icon--2 { animation-delay: 0.8s; }
+.how.is-visible .how__icon--3 { animation-delay: 1.2s; }
+.how.is-visible .how__icon--4 { animation-delay: 1.6s; }
+
+@keyframes pop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.how__wave {
+  clip-path: inset(0 100% 0 0);
+}
+
+.how.is-visible .how__wave {
+  animation: reveal-line 2s ease forwards;
+}
+
+@keyframes reveal-line {
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* ////////////////////////////////// */
+.how__wave {
+  clip-path: inset(0 100% 0 0);
+}
+
+.how.is-visible .how__wave {
+  animation: reveal-line 2s ease forwards;
+}
+
+@keyframes reveal-line {
+  to {
+    clip-path: inset(0 0 0 0);
   }
 }
